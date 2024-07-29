@@ -1,0 +1,53 @@
+/*
+=============== 
+Global Styles
+===============
+*/
+:root {
+  --clr-transparent: rgba(0, 0, 0, 0);
+  --clr-grey-0: #f8f8f8;
+  --clr-grey-1: #dedede;
+  --clr-grey-2: #cccccc;
+  --clr-grey-3: #b9b9b9;
+  --clr-grey-4: #a6a6a6;
+  --clr-grey-5: #939393;
+  --clr-grey-6: #808080;
+  --clr-grey-7: #6d6d6d;
+  --clr-grey-8: #5a5a5a;
+  --clr-grey-9: #464646;
+  --clr-grey-10: #333333;
+  --clr-pink-1: #fedfec;
+  --clr-pink-2: #febfd9;
+  --clr-pink-3: #fda0c6;
+  --clr-pink-4: #fd80b3;
+  --clr-pink-5: #fc60a0;
+  --clr-pink-6: #ca4d80;
+  --clr-pink-7: #973a60;
+  --clr-pink-8: #652640;
+  --clr-pink-9: #321320;
+  --clr-white: #fff;
+  --clr-black: black;
+  --clr-grey: grey;
+  --clr-purple: #6717cf;
+  --clr-link-blue: #3681ad;
+  --clr-gold: gold;
+  --clr-orange: orange;
+  --clr-identity-blue: #3460e7;
+  --clr-identity-red: #ff3819;
+  --clr-mark-bg-red: rgba(255, 56, 25, 0.1);
+  --clr-mark-bg-gold: rgba(255, 215, 0, 0.1);
+  --clr-mark-bg-orange: rgba(255, 165, 0, 0.1);
+  --clr-mark-bg-blue: rgba(52, 96, 231, 0.1);
+  --clr-font: var(--clr-grey-10);
+  --width-nav-icons: 3.5rem;
+  --border-thin-grey: solid 1px var(--clr-grey-1);
+  --border-extreme-thin-grey: solid 1px var(--clr-grey-0);
+  /* --small-word-space: 1px; */
+  --small-letter-space: 1px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
