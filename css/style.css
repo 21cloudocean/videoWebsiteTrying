@@ -46,6 +46,10 @@ Global Styles
   --border-normal-grey: solid 1px var(--clr-grey-8);
   --border-thin-grey: solid 1px var(--clr-grey-1);
   --border-extreme-thin-grey: solid 1px var(--clr-grey-0);
+  --linear-gradient-black: linear-gradient(
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.7)
+  );
   /* --small-word-space: 1px; */
   --small-letter-space: 1px;
 }
@@ -55,7 +59,9 @@ Global Styles
   padding: 0;
   box-sizing: border-box;
 }
-
+body::-webkit-scrollbar {
+  display: none;
+}
 li {
   list-style: none;
 }
@@ -190,7 +196,7 @@ main.index {
   left: 0;
   width: 100%;
   height: 3rem;
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
+  background: var(--linear-gradient-black);
   justify-content: space-between;
   align-items: flex-end;
 }
@@ -214,6 +220,71 @@ main.index {
 }
 .carousel-circle a.selected {
   background-color: var(--clr-white);
+}
+.videos-container {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+  margin-top: 5px;
+}
+.video-card {
+  background-color: var(--clr-white);
+  border-radius: 5px;
+  overflow: hidden;
+}
+.video-img {
+  height: 10rem;
+}
+.video-play-info {
+  position: absolute;
+  bottom: 0;
+  justify-content: space-between;
+  width: 100%;
+  /* padding: 5px 10px; */
+  background: var(--linear-gradient-black);
+}
+.video-play-info span {
+  color: var(--clr-white);
+  font-size: 0.7rem;
+  display: inline-block;
+  margin: 5px 8px;
+}
+.video-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+  margin: 10px;
+}
+.title-text {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+.video-card-footer {
+  width: 100%;
+  justify-content: space-between;
+  padding: 10px;
+}
+.card-footer-left {
+  column-gap: 5px;
+}
+
+.video-card-footer .status.up span {
+  display: inline-block;
+  font-size: 0.7rem;
+  border: var(--border-normal-grey);
+  border-radius: 3px;
+  width: 1.2rem;
+  text-align: center;
+}
+.video-card-footer .publisher span {
+  font-size: 0.8rem;
+  color: var(--clr-grey-8);
+}
+.card-footer-right i {
+  color: var(--clr-grey-8);
 }
 /*
 =============== 
