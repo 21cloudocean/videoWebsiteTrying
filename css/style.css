@@ -349,8 +349,12 @@ main.index {
   color: var(--clr-grey-8);
 }
 /* trend-动态页 */
+main.trend {
+  background-color: var(--clr-grey-1);
+}
 .usually-visit {
   padding: 10px;
+  background-color: var(--clr-white);
 }
 .usual-visit-intro {
   justify-content: space-between;
@@ -364,10 +368,10 @@ main.index {
   color: var(--clr-grey-5);
 }
 .usually-visit-container {
-  column-gap: 8px;
+  column-gap: 20px;
 }
 .usually-visit-card {
-  width: 3.5rem;
+  width: 4rem;
 }
 .selection-text {
   overflow: hidden;
@@ -379,11 +383,85 @@ main.index {
   word-break: break-all;
 }
 .visit-img {
-  transform: scale(80%);
+  transform: scale(90%);
 }
 .visit-name {
   font-size: 0.65rem;
   color: var(--clr-grey-8);
+}
+.trends-container {
+  padding: 10px 0;
+}
+.trend-card {
+  background-color: var(--clr-white);
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.trend-title {
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0 10px 0;
+}
+.trend-title-left {
+  column-gap: 15px;
+  align-items: center;
+}
+.trend-user-img {
+  transform: scale(80%);
+}
+.trend-title-text .user-name {
+  font-size: 0.9rem;
+}
+.trend-title-text .trend-time {
+  color: var(--clr-grey-5);
+  font-size: 0.8rem;
+  line-height: 1;
+}
+.trend-title-right i {
+  color: var(--clr-grey-5);
+}
+.video-container {
+  width: 100%;
+  height: 15rem;
+  border-radius: 5px;
+  overflow: hidden;
+}
+video {
+  width: 100%;
+  object-fit: contain;
+}
+.video-play-control {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  justify-content: space-between;
+  padding: 5px 10px;
+  align-items: flex-end;
+  background: var(--linear-gradient-black);
+}
+.video-play-control span {
+  color: var(--clr-white);
+  font-size: 0.8rem;
+  display: inline-block;
+}
+.video-length {
+  background-color: var(--clr-grey-10);
+  padding: 5px;
+}
+.video-control-right i {
+  font-size: 2rem;
+  color: var(--clr-white);
+}
+.video-title-text {
+  font-size: 0.9rem;
+  font-weight: 550;
+}
+.trend-footer {
+  justify-content: space-around;
+}
+.trend-footer span {
+  color: var(--clr-grey-8);
+  font-size: 0.8rem;
 }
 /*
 =============== 
