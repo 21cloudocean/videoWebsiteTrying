@@ -4,11 +4,84 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>video website</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-
+  <nav class="nav mine-nav">
+    <div class="nav-center mine-nav-center flex">
+      <i class="fa-solid fa-tv"></i>
+      <i class="fa-solid fa-expand"></i>
+      <i class="fa-solid fa-shirt"></i>
+      <i class="fa-solid fa-moon"></i>
+    </div>
+  </nav>
+  <section class="mine-user">
+    <div class="mine-user-center grid">
+      <div class="mine-user-top flex">
+        <div class="mine-user-left flex">
+          <div class="user-img mine-user-img">
+            <img src="./image/pic.jpg" alt="">
+          </div>
+          <div class="mine-user-intro">
+            <div class="user-intro-firstline flex">
+              <p class="mine-name">在我小时候喜欢去林间</p>
+              <i class="fa-solid fa-pen-to-square"></i>
+              <div class="level"><span class="level-text level-6">Lv6</span></div>
+            </div>
+            <div class="user-intro-secondline">
+              <span class="vip-text btn-pink-white">年度大会员</span>
+            </div>
+            <div class="user-intro-thirdline flex">
+              <span class="money">B币: 0</span>
+              <span class="coin">硬币: 700</span>
+            </div>
+          </div>
+        </div>
+        <div class="mine-user-right">
+          <span>空间 <i class="fa-solid fa-chevron-right"></i></span>
+        </div>
+      </div>
+      <div class="mine-user-bottom grid">
+        <div class="user-bottom-column mine-trend-num">
+          <p class="user-num mine-trend-num-text">8</p>
+          <span class="user-num-type">动态</span>
+        </div>
+        <div class="user-bottom-column mine-follow-num">
+          <p class="user-num mine-follow-num-text">119</p>
+          <span class="user-num-type">关注</span>
+        </div>
+        <div class="user-bottom-column mine-follower-num">
+          <p class="user-num mine-follower-num-text">25</p>
+          <span class="user-num-type">粉丝</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <main class="mine">
+    <div class="video-record grid">
+      <div class="video-record-card">
+        <i class="fa-solid fa-download"></i>
+        <span class="video-record-type">离线缓存</span>
+      </div>
+      <div class="video-record-card">
+        <i class="fa-solid fa-clock"></i>
+        <span class="video-record-type">历史记录</span>
+      </div>
+      <div class="video-record-card">
+        <i class="fa-solid fa-star"></i>
+        <span class="video-record-type">我的收藏</span>
+      </div>
+      <div class="video-record-card">
+        <i class="fa-solid fa-play"></i>
+        <span class="video-record-type">稍后再看</span>
+      </div>
+    </div>
+  </main>
 </body>
 
 </html>
