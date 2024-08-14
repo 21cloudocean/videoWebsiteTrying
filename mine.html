@@ -12,56 +12,60 @@
 </head>
 
 <body>
-  <nav class="nav mine-nav">
-    <div class="nav-center mine-nav-center flex">
-      <i class="fa-solid fa-tv"></i>
-      <i class="fa-solid fa-expand"></i>
-      <i class="fa-solid fa-shirt"></i>
-      <i class="fa-solid fa-moon"></i>
-    </div>
-  </nav>
-  <section class="mine-user">
-    <div class="mine-user-center grid">
-      <div class="mine-user-top flex">
-        <div class="mine-user-left flex">
-          <div class="user-img mine-user-img">
-            <img src="./image/pic.jpg" alt="">
+  <div class="mine fixed-container relative">
+    <div class="fixed">
+      <nav class="nav mine-nav">
+        <div class="nav-center mine-nav-center flex">
+          <i class="fa-solid fa-tv"></i>
+          <i class="fa-solid fa-expand"></i>
+          <i class="fa-solid fa-shirt"></i>
+          <i class="fa-solid fa-moon"></i>
+        </div>
+      </nav>
+      <section class="mine-user">
+        <div class="mine-user-center grid">
+          <div class="mine-user-top flex">
+            <div class="mine-user-left flex">
+              <div class="user-img mine-user-img">
+                <img src="./image/pic.jpg" alt="">
+              </div>
+              <div class="mine-user-intro">
+                <div class="user-intro-firstline flex">
+                  <p class="mine-name">在我小时候喜欢去林间</p>
+                  <i class="fa-solid fa-pen-to-square"></i>
+                  <div class="level"><span class="level-text level-6">Lv6</span></div>
+                </div>
+                <div class="user-intro-secondline">
+                  <span class="vip-text btn-pink-white">年度大会员</span>
+                </div>
+                <div class="user-intro-thirdline flex">
+                  <span class="money">B币: 0</span>
+                  <span class="coin">硬币: 700</span>
+                </div>
+              </div>
+            </div>
+            <div class="mine-user-right">
+              <span>空间 <i class="fa-solid fa-chevron-right"></i></span>
+            </div>
           </div>
-          <div class="mine-user-intro">
-            <div class="user-intro-firstline flex">
-              <p class="mine-name">在我小时候喜欢去林间</p>
-              <i class="fa-solid fa-pen-to-square"></i>
-              <div class="level"><span class="level-text level-6">Lv6</span></div>
+          <div class="mine-user-bottom grid">
+            <div class="user-bottom-column mine-trend-num">
+              <p class="user-num mine-trend-num-text">8</p>
+              <span class="user-num-type">动态</span>
             </div>
-            <div class="user-intro-secondline">
-              <span class="vip-text btn-pink-white">年度大会员</span>
+            <div class="user-bottom-column mine-follow-num">
+              <p class="user-num mine-follow-num-text">119</p>
+              <span class="user-num-type">关注</span>
             </div>
-            <div class="user-intro-thirdline flex">
-              <span class="money">B币: 0</span>
-              <span class="coin">硬币: 700</span>
+            <div class="user-bottom-column mine-follower-num">
+              <p class="user-num mine-follower-num-text">25</p>
+              <span class="user-num-type">粉丝</span>
             </div>
           </div>
         </div>
-        <div class="mine-user-right">
-          <span>空间 <i class="fa-solid fa-chevron-right"></i></span>
-        </div>
-      </div>
-      <div class="mine-user-bottom grid">
-        <div class="user-bottom-column mine-trend-num">
-          <p class="user-num mine-trend-num-text">8</p>
-          <span class="user-num-type">动态</span>
-        </div>
-        <div class="user-bottom-column mine-follow-num">
-          <p class="user-num mine-follow-num-text">119</p>
-          <span class="user-num-type">关注</span>
-        </div>
-        <div class="user-bottom-column mine-follower-num">
-          <p class="user-num mine-follower-num-text">25</p>
-          <span class="user-num-type">粉丝</span>
-        </div>
-      </div>
+      </section>
     </div>
-  </section>
+  </div>
   <main class="mine">
     <div class="video-record grid">
       <div class="video-record-card">
@@ -81,7 +85,125 @@
         <span class="video-record-type">稍后再看</span>
       </div>
     </div>
+    <div class="mine-main">
+      <div class="optional">
+        <div class="mine-optional-title optional-title">
+          <div class="optional-title-center mine-title-center">
+            <p class="title-text">创作中心</p>
+            <button class="title-right btn-pink-white createcenter-title-btn"><i class="fa-solid fa-upload"></i>
+              发布</button>
+          </div>
+        </div>
+        <div class="mine-optional-content optional-content createcenter-content">
+          <div class="mine-optional-content-center optional-content-center four-column createcenter-content-center">
+            <!-- single card -->
+            <div class="mine-optional-card optional-card grid">
+              <i class="fa-solid fa-lightbulb"></i>
+              <span class="mine-optional-type optional-type">创作中心</span>
+            </div>
+            <!-- end of single card -->
+          </div>
+        </div>
+      </div>
+      <div class="optional">
+        <div class="mine-optional-title optional-title">
+          <div class="optional-title-center mine-title-center">
+            <p class="title-text">推荐服务</p>
+          </div>
+        </div>
+        <div class="mine-optional-content optional-content recommend-content">
+          <div class="mine-optional-content-center optional-content-center four-column recommend-content-center">
+            <!-- single card -->
+            <div class="mine-optional-card optional-card grid">
+              <i class="fa-solid fa-lightbulb"></i>
+              <span class="mine-optional-type optional-type">创作中心</span>
+            </div>
+            <!-- end of single card -->
+          </div>
+        </div>
+      </div>
+      <div class="optional">
+        <div class="mine-optional-title optional-title">
+          <div class="optional-title-center mine-title-center">
+            <p class="title-text">更多服务</p>
+          </div>
+        </div>
+        <div class="mine-optional-content optional-content service-content">
+          <div class="mine-optional-content-center optional-content-center nogrid service-content-center">
+            <!-- single card -->
+            <div class="mine-optional-card optional-card flex">
+              <div class="optional-card-left">
+                <i class="fa-solid fa-lightbulb"></i>
+                <span class="service-optional-type nogrid-optional-type">联系客服</span>
+              </div>
+              <div class="optional-card-right"><i class="fa-solid fa-chevron-right"></i></div>
+            </div>
+            <!-- end of single card -->
+            <!-- single card -->
+            <div class="mine-optional-card optional-card flex">
+              <div class="optional-card-left">
+                <i class="fa-solid fa-lightbulb"></i>
+                <span class="service-optional-type nogrid-optional-type">联系客服</span>
+              </div>
+              <div class="optional-card-right"><i class="fa-solid fa-chevron-right"></i></div>
+            </div>
+            <!-- end of single card -->
+            <!-- single card -->
+            <div class="mine-optional-card optional-card flex">
+              <div class="optional-card-left">
+                <i class="fa-solid fa-lightbulb"></i>
+                <span class="service-optional-type nogrid-optional-type">联系客服</span>
+              </div>
+              <div class="optional-card-right"><i class="fa-solid fa-chevron-right"></i></div>
+            </div>
+            <!-- end of single card -->
+            <!-- single card -->
+            <div class="mine-optional-card optional-card flex">
+              <div class="optional-card-left">
+                <i class="fa-solid fa-lightbulb"></i>
+                <span class="service-optional-type nogrid-optional-type">联系客服</span>
+              </div>
+              <div class="optional-card-right"><i class="fa-solid fa-chevron-right"></i></div>
+            </div>
+            <!-- end of single card -->
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
+  <footer class="footer">
+    <div class="footer-center">
+      <a href="./index.html">
+        <div class="footer-icon side-icon">
+          <i class="fa-solid fa-house"></i>
+          <span class="footer-text">首页</span>
+        </div>
+      </a>
+      <a href="./trend.html">
+        <div class="footer-icon side-icon">
+          <i class="fa-solid fa-newspaper"></i>
+          <span class="footer-text">动态</span>
+        </div>
+      </a>
+      <div class="footer-icon center-icon">
+        <i class="fa-solid fa-plus"></i>
+      </div>
+      <a href="./purchase.html">
+        <div class="footer-icon side-icon">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="footer-text">会员购</span>
+        </div>
+      </a>
+      <a href="./mine.html">
+        <div class="footer-icon side-icon selected">
+          <i class="fa-solid fa-tv"></i>
+          <span class="footer-text">我的</span>
+        </div>
+      </a>
+    </div>
+  </footer>
+  <script src="./js/data.js"></script>
+  <script src="./js/mine.js"></script>
 </body>
 
 </html>
