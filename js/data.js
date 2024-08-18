@@ -26,3 +26,10 @@ const service = [
   { id: 2, icon: 'seedling', text: '青少年守护' },
   { id: 3, icon: 'gear', text: '设置' }
 ]
+const purchaseIcon = [
+  { id: 0, icon: 'table', text: '我的订单' },
+  { id: 1, icon: 'cart-shopping', text: '购物车' },
+  { id: 2, icon: 'star', text: '商品收藏' },
+  { id: 3, icon: 'clock', text: '商品足迹' },
+  { id: 4, icon: 'user', text: '个人中心' }
+]
