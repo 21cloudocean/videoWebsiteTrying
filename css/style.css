@@ -35,7 +35,6 @@ Global Styles
   --clr-blue-7: #61749e;
   --clr-blue-8: #4c5b7c;
   --clr-blue-9: #37425a;
-
   --clr-white: #fff;
   --clr-black: black;
   --clr-grey: grey;
@@ -52,6 +51,8 @@ Global Styles
   --clr-bg-black: rgba(0, 0, 0, 0.1);
   --clr-carousel-dot: rgba(255, 255, 255, 0.5);
   --clr-font: var(--clr-grey-10);
+  --card-two-columns-width: 48vw;
+  --two-columns-divider-width: 2vw;
   --width-nav-icons: 3.5rem;
   --border-bottom-selected-nav: solid 3px var(--clr-pink-5);
   --border-normal-grey: solid 1px var(--clr-grey-8);
@@ -135,6 +136,10 @@ img {
 .level-6 {
   background-color: var(--clr-orange);
   color: var(--clr-white);
+}
+.rank {
+  background-color: var(--clr-mark-bg-orange);
+  color: var(--clr-orange);
 }
 /*
 =============== 
@@ -702,6 +707,72 @@ main.purchase {
 .recommend-tag-text {
   white-space: nowrap;
   font-size: 0.75rem;
+}
+/* purchase-瀑布流设置 */
+.goods {
+  width: calc(
+    var(--card-two-columns-width) * 2 + var(--two-columns-divider-width)
+  );
+  height: 10000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  background-color: var(--clr-grey-0);
+}
+.goods-card {
+  width: var(--card-two-columns-width);
+  margin-bottom: 10px;
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: var(--clr-white);
+  padding-bottom: 10px;
+}
+.divider1 {
+  flex-basis: 100%;
+  width: var(--two-columns-divider-width);
+  /* background-color: red; */
+}
+.divider1 {
+  order: 1;
+}
+.goods-card:nth-of-type(2n + 1) {
+  order: 1;
+}
+.goods-card:nth-of-type(2n + 2) {
+  order: 2;
+}
+/* purchase-购物单独卡片设置 */
+.goods-card-intro {
+  display: grid;
+  grid-template-rows: repeat(3, 1.25rem);
+  row-gap: 5px;
+  padding: 10px;
+}
+.goods-card-title {
+  font-weight: 550;
+}
+.goods-tag span {
+  display: inline-block;
+  padding: 0 2px;
+  font-size: 0.8rem;
+  border-radius: 3px;
+}
+.pink-font {
+  color: var(--clr-pink-5);
+}
+.price-intro,
+.price {
+  font-size: 0.75rem;
+}
+.price,
+.goods-card-footer-right {
+  color: var(--clr-grey-5);
+}
+.goods-card-footer {
+  display: flex;
+  justify-content: space-between;
 }
 /* mine-main */
 main.mine {
