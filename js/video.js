@@ -36,7 +36,7 @@ window.onload = function () {
     let progress = (timePlayed / timeTotal) * 100 + '%'
     currentBar.style.width = progress
     progressIcon.style.left = progress
-  }, 1000)
+  }, 100)
   // 进度条拖动进度
   wholeBar.addEventListener('click', function (e) {
     currentBar.style.width = e.offsetX + 'px'
