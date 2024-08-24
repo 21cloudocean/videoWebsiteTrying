@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>video website</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <div class="video-play-container relative">
+    <video class="video-detail">
+      <source src="./video/video.mp4" type="video/mp4" />
+      Sorry, your browser does not support embedded videos
+    </video>
+    <div class="overlay-top flex absolute">
+      <div class="overlay-top-left"><a href="javascript:history.back(-1)"><i class="fa-solid fa-chevron-left"></i></a>
+      </div>
+      <div class="overlay-top-right flex">
+        <i class="fa-solid fa-headphones"></i>
+        <i class="fa-solid fa-minimize"></i>
+        <i class="fa-solid fa-tv"></i>
+        <i class="fa-solid fa-ellipsis-vertical"></i>
+      </div>
+    </div>
+    <div class="overlay-center absolute"></div>
+    <div class="overlay-bottom grid absolute">
+      <div class="overlay-bottom-left"><i class="video-play-icon fa-solid fa-play"></i></div>
+      <div class="overlay-bottom-middle flex">
+        <div class="progress-bar-parent">
+          <div class="progress-bar"></div>
+          <div class="progress-icon"></div>
+        </div>
+        <div class="video-time">
+          <span class="video-time-text">00:00/00:00</span>
+        </div>
+      </div>
+      <div class="overlay-bottom-right flex">
+        <i class="fa-solid fa-expand"></i>
+        <i class="fa-solid fa-square"></i>
+      </div>
+    </div>
+  </div>
+  <script src="./js/video.js"></script>
+</body>
+
+</html>

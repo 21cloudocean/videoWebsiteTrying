@@ -62,6 +62,10 @@ Global Styles
     rgba(0, 0, 0, 0),
     rgba(0, 0, 0, 0.7)
   );
+  --linear-gradient-black-reverse: linear-gradient(
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0)
+  );
   /* --small-word-space: 1px; */
   --small-letter-space: 1px;
 }
@@ -95,6 +99,9 @@ img {
 /* style class */
 .relative {
   position: relative;
+}
+.absolute {
+  position: absolute;
 }
 .fixed {
   position: fixed;
@@ -855,6 +862,84 @@ main.mine {
 }
 /*
 =============== 
+video页面
+===============
+*/
+.video-play-container {
+  height: 35vh;
+  overflow: hidden;
+  background-color: var(--clr-black);
+}
+.video-detail {
+  height: 100%;
+}
+.overlay-top {
+  z-index: 10;
+  height: 2rem;
+  background: var(--linear-gradient-black-reverse);
+  width: 100%;
+  color: var(--clr-white);
+  top: 0;
+  left: 0;
+  justify-content: space-between;
+  padding: 10px;
+}
+.overlay-top-left a,
+.overlay-top-left a:visited {
+  color: var(--clr-white);
+}
+.overlay-top-right {
+  justify-content: space-between;
+  width: 50%;
+}
+.overlay-bottom {
+  grid-template-columns: auto 1fr auto;
+  left: 0;
+  bottom: 0;
+  background: var(--linear-gradient-black);
+  color: var(--clr-white);
+  height: 2rem;
+  width: 100%;
+  padding: 0 10px;
+  align-items: center;
+}
+.overlay-bottom-left {
+  width: 2rem;
+}
+.overlay-bottom-middle {
+  align-items: center;
+  justify-content: space-between;
+  width: 70vw;
+}
+.overlay-bottom-right {
+  width: 4rem;
+  justify-content: space-between;
+}
+
+/* 进度条 */
+.progress-bar-parent {
+  height: 3px;
+  width: 50vw;
+  background-color: var(--clr-grey-5);
+  position: relative;
+}
+.progress-bar {
+  width: 0;
+  height: 3px;
+  background-color: var(--clr-pink-5);
+}
+.progress-icon {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--clr-white);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translateY(50%);
+}
+/*
+=============== 
 footer
 ===============
 */
@@ -904,4 +989,15 @@ footer
 .center-icon i {
   color: var(--clr-white);
   font-size: 20px;
+}
+/*
+=============== 
+toggle class
+===============
+*/
+/* 视频页：whole-screen */
+.whole-screen .overlay-top,
+.whole-screen .overlay-center,
+.whole-screen .overlay-bottom {
+  display: none;
 }
