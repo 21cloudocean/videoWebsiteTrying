@@ -49,6 +49,8 @@ Global Styles
   --clr-mark-bg-orange: rgba(255, 165, 0, 0.1);
   --clr-mark-bg-blue: rgba(52, 96, 231, 0.1);
   --clr-bg-black: rgba(0, 0, 0, 0.1);
+  --clr-bg-black-darker: rgba(0, 0, 0, 0.7);
+
   --clr-carousel-dot: rgba(255, 255, 255, 0.5);
   --clr-font: var(--clr-grey-10);
   --card-two-columns-width: 48vw;
@@ -891,6 +893,18 @@ video页面
 .overlay-top-right {
   justify-content: space-between;
   width: 50%;
+}
+.overlay-center {
+  display: flex;
+  color: var(--clr-white);
+  right: 10px;
+  bottom: 2rem;
+  border-radius: 50%;
+  background-color: var(--clr-bg-black-darker);
+  height: 2rem;
+  width: 2rem;
+  align-items: center;
+  justify-content: center;
 }
 .overlay-bottom {
   grid-template-columns: auto 1fr auto;
