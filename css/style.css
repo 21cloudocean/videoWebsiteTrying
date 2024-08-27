@@ -952,6 +952,24 @@ video页面
   bottom: 0;
   transform: translateY(50%);
 }
+.video-profile-icons {
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+}
+.video-profile-icon-card {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  justify-items: center;
+  gap: 5px;
+}
+.video-profile-icon-card i {
+  font-size: 1rem;
+  color: var(--clr-grey-10);
+}
+.video-profile-icon-card span {
+  font-size: 0.8rem;
+  color: var(--clr-grey-10);
+}
 /*
 =============== 
 footer
