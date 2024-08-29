@@ -59,6 +59,7 @@ Global Styles
   --border-bottom-selected-nav: solid 3px var(--clr-pink-5);
   --border-normal-grey: solid 1px var(--clr-grey-8);
   --border-thin-grey: solid 1px var(--clr-grey-1);
+  --border-thin-pink: solid 1px var(--clr-pink-5);
   --border-extreme-thin-grey: solid 1px var(--clr-grey-0);
   --linear-gradient-black: linear-gradient(
     rgba(0, 0, 0, 0),
@@ -135,6 +136,7 @@ img {
   border-radius: 2px;
   border: none;
   letter-spacing: var(--small-letter-space);
+  white-space: nowrap;
 }
 .btn-pink-white {
   background-color: var(--clr-pink-5);
@@ -176,13 +178,15 @@ nav li {
 .nav-img {
   transform: scale(80%);
 }
-nav input {
+nav.index-nav input,
+nav.purchase-nav input {
   width: 100%;
   height: 2rem;
   border-radius: 15px;
   border: var(--border-normal-grey);
 }
-nav input::placeholder {
+nav.index-nav input::placeholder,
+nav.purchase-nav input::placeholder {
   padding-left: 30px;
   color: var(--clr-grey-8);
 }
@@ -466,15 +470,16 @@ main.index {
   column-gap: 5px;
 }
 
-.video-card-footer .status.up span {
+.status.up span {
   display: inline-block;
   font-size: 0.7rem;
   border: var(--border-normal-grey);
   border-radius: 3px;
   width: 1.2rem;
   text-align: center;
+  color: var(--clr-grey-8);
 }
-.video-card-footer .publisher span {
+.publisher span {
   font-size: 0.8rem;
   color: var(--clr-grey-8);
 }
@@ -952,9 +957,116 @@ video页面
   bottom: 0;
   transform: translateY(50%);
 }
+/* 简介 */
+
+.video-intro-nav-center {
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 3rem;
+  border-bottom: var(--border-thin-grey);
+  padding: 0 10px;
+}
+.video-nav-left {
+  justify-content: space-around;
+  width: 50%;
+}
+.video-nav-list {
+  display: flex;
+  color: var(--clr-grey-8);
+  font-size: 0.9rem;
+  height: 3rem;
+  align-items: center;
+  gap: 5px;
+}
+.video-nav-list .comment-num {
+  font-size: 0.75rem;
+}
+.video-nav-list.selected {
+  color: var(--clr-pink-4);
+  border-bottom: var(--border-bottom-selected-nav);
+}
+.video-nav-right {
+  width: 40%;
+  align-items: center;
+}
+.video-intro-nav .danmu-input {
+  border-radius: 10px 0 0 10px;
+  border: var(--border-thin-grey);
+  background-color: var(--clr-grey-0);
+  height: 1.5rem;
+  width: 12rem;
+}
+.danmu-btn {
+  width: 4rem;
+  background-color: var(--clr-white);
+  border-radius: 0 10px 10px 0;
+  border: var(--border-thin-grey);
+  height: 1.5rem;
+}
+.video-intro-nav .danmu-input::placeholder {
+  padding: 5px 0 5px 10px;
+}
+.video-bottom-block-container {
+  padding: 0 10px;
+}
+/* UP名称栏 */
+.video-profile-user {
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+.video-user-left {
+  gap: 20px;
+}
+.video-user-img {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.video-user-name {
+  font-size: 0.9rem;
+}
+.video-user-num {
+  font-size: 0.8rem;
+  color: var(--clr-grey-5);
+}
+.video-user-right .btn {
+  width: 5rem;
+  padding: 3px 10px;
+  border-radius: 15px;
+}
+.btn.charging {
+  color: var(--clr-pink-5);
+  border: var(--border-thin-pink);
+  background-color: var(--clr-white);
+}
+.btn.following {
+  color: var(--clr-grey-5);
+  background-color: var(--clr-grey-1);
+}
+/* 视频标题区 */
+.video-profile-title {
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+.video-profile-title-right {
+  color: var(--clr-grey-5);
+}
+.video-profile-play,
+.video-recommend-card-footer {
+  color: var(--clr-grey-5);
+  font-size: 0.8rem;
+}
+.video-profile-play {
+  display: flex;
+  gap: 8px;
+}
+/* 简介三连区 */
 .video-profile-icons {
   grid-template-columns: repeat(5, 1fr);
   justify-items: center;
+  padding: 20px 0;
 }
 .video-profile-icon-card {
   display: grid;
@@ -970,6 +1082,44 @@ video页面
   font-size: 0.8rem;
   color: var(--clr-grey-10);
 }
+
+/* 视频推荐区 */
+.video-recommend-container {
+  border-top: var(--border-thin-grey);
+}
+.video-page-recommend-card {
+  display: flex;
+  height: 7.5rem;
+  gap: 20px;
+  padding: 10px 0;
+  border-bottom: var(--border-thin-grey);
+}
+.video-recommend-title {
+  font-size: 0.9rem;
+}
+.video-recommend-img {
+  height: 100%;
+  width: 35%;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.video-recommend-text {
+  display: grid;
+  grid-template-rows: 1fr auto auto;
+  gap: 5px;
+  width: 65%;
+}
+.video-recommend-pub {
+  gap: 5px;
+}
+.video-recommend-card-footer {
+  justify-content: space-between;
+}
+.video-recommend-play {
+  display: flex;
+  gap: 20px;
+}
+
 /*
 =============== 
 footer

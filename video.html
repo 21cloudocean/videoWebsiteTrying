@@ -46,24 +46,24 @@
     </div>
   </div>
   <div class="intro-container">
-    <nav class="video-intro--nav">
-      <div class="video-intro-nav-center">
-        <div class="video-nav-left">
-          <div class="nav-intro-btn"><span>简介</span></div>
-          <div class="nav-comment-btn"><span>评论</span></div>
+    <nav class="video-intro-nav">
+      <div class="video-intro-nav-center flex">
+        <div class="video-nav-left flex">
+          <div class="video-nav-list nav-intro-btn selected"><span>简介</span></div>
+          <div class="video-nav-list nav-comment-btn"><span>评论 </span><span class="comment-num">200</span></div>
         </div>
-        <div class="nav-right">
+        <div class="video-nav-right flex">
           <input class="danmu-input" type="text" placeholder="点我发弹幕">
-          <button class="danmu-btn"><i class="fa-solid fa-square"></i></button>
+          <button class="danmu-btn btn"><i class="fa-solid fa-square"></i></button>
         </div>
       </div>
     </nav>
     <div class="video-bottom-block-container">
       <div class="video-detail-container">
         <div class="video-profile-container">
-          <div class="video-profile-user">
-            <div class="video-user-left">
-              <div class="user-img">
+          <div class="video-profile-user flex">
+            <div class="video-user-left flex">
+              <div class="user-img video-user-img">
                 <img src="./image/pic.jpg" alt="">
               </div>
               <div class="user-intro-text">
@@ -72,22 +72,22 @@
               </div>
             </div>
             <div class="video-user-right">
-              <button class="btn">充电</button>
-              <button class="btn">已关注</button>
+              <button class="btn charging"><i class="fa-solid fa-bolt"></i> 充电</button>
+              <button class="btn following"><i class="fa-solid fa-bars"></i> 已关注</button>
             </div>
           </div>
           <div class="video-profile-intro">
-            <div class="video-profile-title">
+            <div class="video-profile-title flex">
               <div class="video-profile-title-left">
                 <p class="video-profile-title-text">新神榜杨戬太好看了，你们都看了吗</p>
               </div>
               <div class="video-profile-title-right"><i class="fa-solid fa-chevron-down"></i></div>
             </div>
             <div class="video-profile-play">
-              <span>3.5万</span>
-              <span>368</span>
+              <span><i class="fa-solid fa-circle-play"></i>3.5万</span>
+              <span><i class="fa-solid fa-list"></i>368</span>
               <span>2024年8月27日 11:15</span>
-              <span>99人正在看</span>
+              <span><i class="fa-solid fa-user"></i>99人正在看</span>
             </div>
             <div class="video-profile-icons grid">
               <div class="video-profile-icon-card">
@@ -113,6 +113,7 @@
             </div>
             <div class="video-page-tag"></div>
             <div class="video-recommend-container">
+              <!-- single card -->
               <article class="video-page-recommend-card">
                 <div class="video-recommend-img">
                   <img src="./image/pic.jpg" alt="">
@@ -123,15 +124,79 @@
                     <div class="status up"><span>up</span></div>
                     <div class="publisher"><span>一个随便起的昵称</span></div>
                   </div>
-                  <div class="video-recommend-card-footer">
+                  <div class="video-recommend-card-footer flex">
                     <div class="video-recommend-play">
-                      <span>3.5万</span>
-                      <span>368</span>
+                      <span><i class="fa-solid fa-circle-play"></i> 3.5万</span>
+                      <span><i class="fa-solid fa-list"></i> 368</span>
                     </div>
                     <i class="fa-solid fa-ellipsis-vertical"></i>
                   </div>
                 </div>
               </article>
+              <!-- end of single card -->
+              <!-- single card -->
+              <article class="video-page-recommend-card">
+                <div class="video-recommend-img">
+                  <img src="./image/pic.jpg" alt="">
+                </div>
+                <div class="video-recommend-text">
+                  <p class="video-recommend-title">在我小时候喜欢去林间</p>
+                  <div class="video-recommend-pub flex">
+                    <div class="status up"><span>up</span></div>
+                    <div class="publisher"><span>一个随便起的昵称</span></div>
+                  </div>
+                  <div class="video-recommend-card-footer flex">
+                    <div class="video-recommend-play">
+                      <span><i class="fa-solid fa-circle-play"></i> 3.5万</span>
+                      <span><i class="fa-solid fa-list"></i> 368</span>
+                    </div>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                  </div>
+                </div>
+              </article>
+              <!-- end of single card -->
+              <!-- single card -->
+              <article class="video-page-recommend-card">
+                <div class="video-recommend-img">
+                  <img src="./image/pic.jpg" alt="">
+                </div>
+                <div class="video-recommend-text">
+                  <p class="video-recommend-title">在我小时候喜欢去林间</p>
+                  <div class="video-recommend-pub flex">
+                    <div class="status up"><span>up</span></div>
+                    <div class="publisher"><span>一个随便起的昵称</span></div>
+                  </div>
+                  <div class="video-recommend-card-footer flex">
+                    <div class="video-recommend-play">
+                      <span><i class="fa-solid fa-circle-play"></i> 3.5万</span>
+                      <span><i class="fa-solid fa-list"></i> 368</span>
+                    </div>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                  </div>
+                </div>
+              </article>
+              <!-- end of single card -->
+              <!-- single card -->
+              <article class="video-page-recommend-card">
+                <div class="video-recommend-img">
+                  <img src="./image/pic.jpg" alt="">
+                </div>
+                <div class="video-recommend-text">
+                  <p class="video-recommend-title">在我小时候喜欢去林间</p>
+                  <div class="video-recommend-pub flex">
+                    <div class="status up"><span>up</span></div>
+                    <div class="publisher"><span>一个随便起的昵称</span></div>
+                  </div>
+                  <div class="video-recommend-card-footer flex">
+                    <div class="video-recommend-play">
+                      <span><i class="fa-solid fa-circle-play"></i> 3.5万</span>
+                      <span><i class="fa-solid fa-list"></i> 368</span>
+                    </div>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                  </div>
+                </div>
+              </article>
+              <!-- end of single card -->
             </div>
           </div>
         </div>
@@ -140,6 +205,7 @@
     </div>
   </div>
 
+  <script src="./js/data.js"></script>
   <script src="./js/video.js"></script>
 </body>
 

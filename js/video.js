@@ -7,6 +7,14 @@ window.onload = function () {
   const progressIcon = document.querySelector('.progress-icon')
   const videoPlayContainer = document.querySelector('.video-play-container')
   const videoTimeSpan = document.querySelector('.video-time-text')
+  // 页面上的三连类按钮 elements
+  const videoProfileIconsContainer = document.querySelector(
+    '.video-profile-icons'
+  )
+  // 页面上三连类按钮显示
+  let videoProfileIconContent = displayVideoProfileIcons(videoProfileIcon)
+  videoProfileIconsContainer.innerHTML = videoProfileIconContent
+
   // 进度条所需时间+时间显示
   let timer = setInterval(function () {
     let timePlayed = video.currentTime
@@ -53,4 +61,15 @@ window.onload = function () {
   video.addEventListener('click', function () {
     videoPlayContainer.classList.toggle('whole-screen')
   })
+}
+// =============== function===============
+// 自动生成grid卡片
+function displayVideoProfileIcons(arrayName) {
+  let newName = arrayName.map(function (item) {
+    return `      <div class="video-profile-icon-card">
+        <i class="fa-solid fa-${item.icon}"></i>
+        <span class="video-profile-icon-type">${item.text}</span>
+      </div>`
+  })
+  return (newName = newName.join(''))
 }

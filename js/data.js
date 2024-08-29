@@ -33,3 +33,10 @@ const purchaseIcon = [
   { id: 3, icon: 'clock', text: '商品足迹' },
   { id: 4, icon: 'user', text: '个人中心' }
 ]
+const videoProfileIcon = [
+  { id: 0, icon: 'thumbs-up', text: '8999' },
+  { id: 1, icon: 'thumbs-down', text: '不喜欢' },
+  { id: 2, icon: 'coins', text: '1.5万' },
+  { id: 3, icon: 'star', text: '2.5万' },
+  { id: 4, icon: 'share', text: '8799' }
+]
