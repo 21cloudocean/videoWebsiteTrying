@@ -11,10 +11,43 @@ window.onload = function () {
   const videoProfileIconsContainer = document.querySelector(
     '.video-profile-icons'
   )
+  // 简介和评论区切换 elements
+  const videoIntroBtn = document.querySelector('.nav-intro-btn')
+  const videoCommentBtn = document.querySelector('.nav-comment-btn')
+  const videoDetailContainer = document.querySelector('.video-detail-container')
+  const videoCommentContainer = document.querySelector(
+    '.video-comment-block-container'
+  )
   // 页面上三连类按钮显示
   let videoProfileIconContent = displayVideoProfileIcons(videoProfileIcon)
   videoProfileIconsContainer.innerHTML = videoProfileIconContent
-
+  // 简介和评论区切换
+  videoIntroBtn.addEventListener('click', function (e) {
+    // 切换btn样式
+    if (!e.currentTarget.classList.contains('selected')) {
+      e.currentTarget.classList.add('selected')
+    }
+    videoCommentBtn.classList.remove('selected')
+    // 切换内容
+    videoDetailContainer.classList.remove('none')
+    if (videoCommentContainer.classList.contains('none')) {
+      return
+    }
+    videoCommentContainer.classList.add('none')
+  })
+  videoCommentBtn.addEventListener('click', function (e) {
+    // 切换btn样式
+    if (!e.currentTarget.classList.contains('selected')) {
+      e.currentTarget.classList.add('selected')
+    }
+    videoIntroBtn.classList.remove('selected')
+    // 切换内容
+    videoCommentContainer.classList.remove('none')
+    if (videoDetailContainer.classList.contains('none')) {
+      return
+    }
+    videoDetailContainer.classList.add('none')
+  })
   // 进度条所需时间+时间显示
   let timer = setInterval(function () {
     let timePlayed = video.currentTime
@@ -62,6 +95,7 @@ window.onload = function () {
     videoPlayContainer.classList.toggle('whole-screen')
   })
 }
+
 // =============== function===============
 // 自动生成grid卡片
 function displayVideoProfileIcons(arrayName) {
