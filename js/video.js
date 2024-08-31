@@ -1,7 +1,9 @@
 window.onload = function () {
   // elements
   const video = document.querySelector('video')
+  const playPauseContainer = document.querySelector('.overlay-bottom-left')
   const videoPlayIcon = document.querySelector('.video-play-icon')
+  const videoPauseIcon = document.querySelector('.video-pause-icon')
   const wholeBar = document.querySelector('.progress-bar-parent')
   const currentBar = document.querySelector('.progress-bar')
   const progressIcon = document.querySelector('.progress-icon')
@@ -52,6 +54,22 @@ window.onload = function () {
   let timer = setInterval(function () {
     let timePlayed = video.currentTime
     const timeTotal = video.duration
+    // 播放按钮根据播放状态调整
+    if (video.paused) {
+      if (!playPauseContainer.classList.contains('paused')) {
+        playPauseContainer.classList.add('paused')
+      }
+    } else {
+      if (playPauseContainer.classList.contains('paused')) {
+        playPauseContainer.classList.remove('paused')
+      }
+    }
+    // 播放按钮播完后改变
+    // if (timePlayed === timeTotal) {
+    //   if (!playPauseContainer.classList.contains('paused')) {
+    //     playPauseContainer.classList.add('paused')
+    //   }
+    // }
     // 当前时间
     let nowMinute =
       parseInt(timePlayed / 60) > 10
@@ -85,10 +103,20 @@ window.onload = function () {
     video.currentTime = (e.offsetX / wholeBar.clientWidth) * video.duration
     video.play()
   })
+  //
+  playPauseContainer.addEventListener('click', function () {
+    this.classList.toggle('paused')
+  })
+
   // 点击播放按钮后视频播放
   videoPlayIcon.addEventListener('click', function () {
     // videoPlayControl.classList.add('none')
     video.play()
+  })
+  // 点击播放按钮后视频播放
+  videoPauseIcon.addEventListener('click', function () {
+    // videoPlayControl.classList.add('none')
+    video.pause()
   })
   // 点击视频后页面overlay消失
   video.addEventListener('click', function () {

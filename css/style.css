@@ -1283,6 +1283,12 @@ toggle class
 .whole-screen .overlay-bottom {
   display: none;
 }
+.overlay-bottom-left.paused .video-pause-icon {
+  display: none;
+}
+.overlay-bottom-left.paused .video-play-icon {
+  display: block;
+}
 .none {
   display: none;
 }
